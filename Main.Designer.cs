@@ -217,7 +217,7 @@
             groupBoxPasswordManager.Size = new Size(423, 134);
             groupBoxPasswordManager.TabIndex = 4;
             groupBoxPasswordManager.TabStop = false;
-            groupBoxPasswordManager.Text = "Password Manager";
+            groupBoxPasswordManager.Text = "Password Hub";
             // 
             // groupBox1
             // 
@@ -230,7 +230,7 @@
             groupBox1.Size = new Size(435, 271);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Password Manager";
             // 
             // btnSaveKey
             // 
@@ -252,9 +252,9 @@
             lblEncKey.AutoSize = true;
             lblEncKey.Location = new Point(26, 18);
             lblEncKey.Name = "lblEncKey";
-            lblEncKey.Size = new Size(183, 14);
+            lblEncKey.Size = new Size(198, 14);
             lblEncKey.TabIndex = 5;
-            lblEncKey.Text = "Enter your 16 bit Encryption Key:";
+            lblEncKey.Text = "Enter your 16 bytes Encryption Key:";
             // 
             // textBoxKey
             // 
