@@ -33,10 +33,5 @@ namespace PasswordGeneratorV2
             MessageBox.Show("The password was changed.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
-
-        private void textBoxPasswordEdit_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

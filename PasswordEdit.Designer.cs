@@ -54,7 +54,6 @@
             textBoxPasswordEdit.Name = "textBoxPasswordEdit";
             textBoxPasswordEdit.Size = new Size(360, 34);
             textBoxPasswordEdit.TabIndex = 7;
-            textBoxPasswordEdit.TextChanged += textBoxPasswordEdit_TextChanged;
             // 
             // lblPassword
             // 

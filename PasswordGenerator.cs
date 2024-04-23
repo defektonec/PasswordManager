@@ -20,7 +20,6 @@ namespace PasswordGeneratorV2
             {
                 int groupUse = rand.Next(4);
                 int charUse = rand.Next(0, 26);
-
                 switch (groupUse)
                 {
                     case (0):

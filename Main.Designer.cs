@@ -38,7 +38,7 @@
             checkBoxNumbers = new CheckBox();
             txtPswrd = new TextBox();
             checkBoxLowerCase = new CheckBox();
-            checkBoxUseUpperCase = new CheckBox();
+            checkBoxUpperCase = new CheckBox();
             btnRemember = new Button();
             btnPasswordHub = new Button();
             groupBoxPasswordManager = new GroupBox();
@@ -56,7 +56,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(26, 12);
+            pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(435, 116);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -73,8 +73,8 @@
             groupBoxSettings.Controls.Add(checkBoxNumbers);
             groupBoxSettings.Controls.Add(txtPswrd);
             groupBoxSettings.Controls.Add(checkBoxLowerCase);
-            groupBoxSettings.Controls.Add(checkBoxUseUpperCase);
-            groupBoxSettings.Location = new Point(26, 134);
+            groupBoxSettings.Controls.Add(checkBoxUpperCase);
+            groupBoxSettings.Location = new Point(12, 134);
             groupBoxSettings.Name = "groupBoxSettings";
             groupBoxSettings.Size = new Size(435, 245);
             groupBoxSettings.TabIndex = 1;
@@ -168,20 +168,23 @@
             checkBoxLowerCase.Text = "Lower Case";
             checkBoxLowerCase.UseVisualStyleBackColor = true;
             // 
-            // checkBoxUseUpperCase
+            // checkBoxUpperCase
             // 
-            checkBoxUseUpperCase.AutoSize = true;
-            checkBoxUseUpperCase.Location = new Point(26, 21);
-            checkBoxUseUpperCase.Name = "checkBoxUseUpperCase";
-            checkBoxUseUpperCase.Size = new Size(88, 18);
-            checkBoxUseUpperCase.TabIndex = 0;
-            checkBoxUseUpperCase.Text = "Upper Case";
-            checkBoxUseUpperCase.UseVisualStyleBackColor = true;
+            checkBoxUpperCase.AutoSize = true;
+            checkBoxUpperCase.Checked = true;
+            checkBoxUpperCase.CheckState = CheckState.Checked;
+            checkBoxUpperCase.Location = new Point(26, 21);
+            checkBoxUpperCase.Name = "checkBoxUpperCase";
+            checkBoxUpperCase.Size = new Size(88, 18);
+            checkBoxUpperCase.TabIndex = 0;
+            checkBoxUpperCase.Text = "Upper Case";
+            checkBoxUpperCase.UseVisualStyleBackColor = true;
             // 
             // btnRemember
             // 
             btnRemember.BackColor = Color.FromArgb(0, 140, 255);
             btnRemember.Cursor = Cursors.Hand;
+            btnRemember.Enabled = false;
             btnRemember.FlatAppearance.BorderSize = 0;
             btnRemember.FlatStyle = FlatStyle.Flat;
             btnRemember.ForeColor = SystemColors.Control;
@@ -197,6 +200,7 @@
             // 
             btnPasswordHub.BackColor = Color.FromArgb(0, 140, 255);
             btnPasswordHub.Cursor = Cursors.Hand;
+            btnPasswordHub.Enabled = false;
             btnPasswordHub.FlatAppearance.BorderSize = 0;
             btnPasswordHub.FlatStyle = FlatStyle.Flat;
             btnPasswordHub.ForeColor = SystemColors.Control;
@@ -212,7 +216,7 @@
             // 
             groupBoxPasswordManager.Controls.Add(btnRemember);
             groupBoxPasswordManager.Controls.Add(btnPasswordHub);
-            groupBoxPasswordManager.Location = new Point(6, 117);
+            groupBoxPasswordManager.Location = new Point(6, 103);
             groupBoxPasswordManager.Name = "groupBoxPasswordManager";
             groupBoxPasswordManager.Size = new Size(423, 134);
             groupBoxPasswordManager.TabIndex = 4;
@@ -225,9 +229,9 @@
             groupBox1.Controls.Add(lblEncKey);
             groupBox1.Controls.Add(groupBoxPasswordManager);
             groupBox1.Controls.Add(textBoxKey);
-            groupBox1.Location = new Point(26, 399);
+            groupBox1.Location = new Point(12, 405);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(435, 271);
+            groupBox1.Size = new Size(435, 256);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Password Manager";
@@ -239,7 +243,7 @@
             btnSaveKey.FlatAppearance.BorderSize = 0;
             btnSaveKey.FlatStyle = FlatStyle.Flat;
             btnSaveKey.ForeColor = SystemColors.Control;
-            btnSaveKey.Location = new Point(26, 77);
+            btnSaveKey.Location = new Point(26, 63);
             btnSaveKey.Name = "btnSaveKey";
             btnSaveKey.Size = new Size(381, 34);
             btnSaveKey.TabIndex = 3;
@@ -259,19 +263,18 @@
             // textBoxKey
             // 
             textBoxKey.BackColor = SystemColors.ControlLightLight;
-            textBoxKey.Location = new Point(26, 36);
-            textBoxKey.Multiline = true;
+            textBoxKey.Location = new Point(26, 35);
+            textBoxKey.MaxLength = 16;
             textBoxKey.Name = "textBoxKey";
-            textBoxKey.Size = new Size(381, 35);
+            textBoxKey.Size = new Size(381, 22);
             textBoxKey.TabIndex = 0;
-            textBoxKey.TextChanged += textBoxKey_TextChanged;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(494, 701);
+            ClientSize = new Size(460, 673);
             Controls.Add(groupBox1);
             Controls.Add(groupBoxSettings);
             Controls.Add(pictureBox1);
@@ -283,7 +286,6 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Password Generator";
-            Load += Main_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBoxSettings.ResumeLayout(false);
             groupBoxSettings.PerformLayout();
@@ -302,7 +304,7 @@
         private CheckBox checkBoxSpecific;
         private CheckBox checkBoxNumbers;
         private CheckBox checkBoxLowerCase;
-        private CheckBox checkBoxUseUpperCase;
+        private CheckBox checkBoxUpperCase;
         private Label lblLenght;
         private Button btnCopy;
         private Button btnGenerate;

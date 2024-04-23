@@ -15,6 +15,7 @@ namespace PasswordGeneratorV2
         public static byte[] EncryptIV = Encoding.UTF8.GetBytes("YourSecretIV1234");
 
         static public Dictionary<string, byte[]> PasswordsList = new Dictionary<string, byte[]>();
+
         static public void SavePassword(string name, string password)
         {
             if (PasswordsList.ContainsKey(name)) { throw new PasswordAlreadyExists(); }

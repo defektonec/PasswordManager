@@ -74,7 +74,6 @@
             lblNamePassword.Size = new Size(55, 14);
             lblNamePassword.TabIndex = 0;
             lblNamePassword.Text = "Account:";
-            lblNamePassword.Click += lblNamePassword_Click;
             // 
             // textBoxAccountName
             // 
@@ -99,7 +98,6 @@
             Name = "PasswordAdd";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Password Manager";
-            Load += PasswordAdd_Load;
             ResumeLayout(false);
             PerformLayout();
         }

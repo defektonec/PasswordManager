@@ -17,7 +17,6 @@ namespace PasswordGeneratorV2
             InitializeComponent();
             this.MaximizeBox = false;
         }
-
         private void btnSavePassword_Click(object sender, EventArgs e)
         {
             //Check if the name field is not empty
@@ -47,16 +46,6 @@ namespace PasswordGeneratorV2
             }
             MessageBox.Show("The password was saved.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
-        }
-
-        private void lblNamePassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PasswordAdd_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
